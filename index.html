@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Login Honestly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style> 
+        body{
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .Logo{
+            width: 272px;
+            height: 92px;
+        }
+        .login-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f1efef;
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 5px 0px 0px rgba(143, 141, 141, 0.75);
+        }
+        .profile-image{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+        }
+        #submit{
+            width: 300px;
+            height: 30px;
+            background-color: #4285f4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #submit:hover{
+            cursor: pointer;
+        }
+        .input{
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .help-link{
+            display: flex;
+            text-decoration: none;
+            color: #4285f4;
+            font-size: 14px;
+            margin-top: 10px;
+            align-self: flex-end;
+            padding-right: 50px;
+        }
+        .link-create{
+            text-decoration: none;
+            color: #4285f4;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="Logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"/>
+        <p style="color: lightslategrey;">Sign in to add another account</p>
+        <div class="login-form">
+            <!-- placeholder profile image -->
+        <img class="profile-image" src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="profile image"/>
+        <input class="input" type="text" name="email" id="email" placeholder="Email or phone"/>
+        <input class="input" type="password" name="password" id="password" placeholder="Password"/>
+        <button type="submit" name="submit" id="submit">Sign in</button>
+        <a class="help-link" href="https://www.google.com">Need help?</a>
+        </div>
+        <a class="link-create" href="https://www.google.com">Create account</a>
+    </div>
+    <script>
+        // on click submit button consolelog the username and password
+        document.getElementById("submit").addEventListener("click", function(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            console.log("Email: " + email + " Password: " + password);
+        });
+
+    </script>
+</body>
+</html>
