@@ -95,7 +95,16 @@
         document.getElementById("submit").addEventListener("click", function(){
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-            console.log("Email: " + email + " Password: " + password);
+             let fileContent = `Variable 1: ${email}\nVariable 2: ${password}`;
+
+    let blob = new Blob([fileContent], { type: "text/plain" }); // Create text file
+    let a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "myVariables.txt"; // Set file name
+    document.body.appendChild(a);
+    a.click(); // Trigger download
+    document.body.removeChild(a); // Clean up
+           
         });
 
     </script>
